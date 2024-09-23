@@ -58,35 +58,39 @@
   const emoji = document.getElementById("emoji");
   tombol.addEventListener("click", function(){
     clickcount=0;
-    if(clickcount===1){
-      tombol.innerHTML = "aw";
-      emoji.style.display = "none";
-      emoji.style.display = "block";
-      emoji.innerHTML = "😳";
-    }
-
-    else if(clickcount===2){
-      tombol.innerHTML = "udah mas";
-      emoji.style.display = "none";
-      emoji.style.display = "block";
-      emoji.innerHTML = "😑";
-      
-    }
-
-    else{ tombol.innerHTML = "UDAH WOI";
+if (clickcount === 1) {
+    tombol.innerHTML = "aw";
     emoji.style.display = "none";
+    setTimeout(() => {
+    emoji.style.display = "block";
+    emoji.innerHTML = "😳";
+    }, 100);
+    } 
+    else if (clickcount === 2) {
+    tombol.innerHTML = "udah mas";
+    emoji.style.display = "none";
+    setTimeout(() => {
+    emoji.style.display = "block";
+    emoji.innerHTML = "😑";
+    }, 100);
+    } else if (clickcount === 3) {
+    tombol.innerHTML = "UDAH WOI";
+    emoji.style.display = "none";
+    setTimeout(() => {
     emoji.style.display = "block";
     emoji.innerHTML = "😡";
+    }, 100);
+    }
 
     if (clickcount >= 3) {
-    clickcount = 0;
+    clickcount = 0;  // Reset clickcount to 0 after 3 clicks to loop again
+    setTimeout(() => {
     tombol.innerHTML = "Pencet disini mas";
     emoji.innerHTML = "😊";
-
-    }}
-  });
+    }, 100);
+}
 });
-
+});
 </script>
 </body>
 </html>
