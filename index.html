@@ -11,12 +11,13 @@
     button {
       width: 200px;
       height: 50px;
-      font-size: 23px;
+      font-size: 25px;
       align-items: center;
       text-align: center;
       display: flex;
       justify-content: center;
       margin-top: 45px;
+    
     }
     body {background-color: black;
       display: flex;
@@ -49,14 +50,16 @@
   <div class="borderemoji"></div>
   <h1 id="emoji">😊</h1>
 
-<button id="tombol" type="button">Pencet disini mas</button>
+<button id="tombol" type="button">Pencet aku mas</button>
 
 <script> 
   document.addEventListener("DOMContentLoaded", function() {
+  let clickcount=0;
   const tombol = document.getElementById("tombol");
   const emoji = document.getElementById("emoji");
   tombol.addEventListener("click", function(){
-    clickcount=0;
+    clickcount++;
+
     if(clickcount===1){
       tombol.innerHTML = "aw";
       emoji.style.display = "none";
@@ -72,17 +75,13 @@
       
     }
 
-    else if(clickcount===3){ 
-      tombol.innerHTML = "UDAH WOI";
+    else{ tombol.innerHTML = "UDAH WOI";
     emoji.style.display = "none";
     emoji.style.display = "block";
     emoji.innerHTML = "😡";
 
-    if (clickcount >= 3) {
-    clickcount = 0;
 
-
-    }}
+    }
   });
 });
 
