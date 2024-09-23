@@ -55,11 +55,11 @@
 
 <script> 
   document.addEventListener("DOMContentLoaded", function() {
-  let clickcount=0;
   const tombol = document.getElementById("tombol");
   const emoji = document.getElementById("emoji");
   tombol.addEventListener("click", function(){
-    clickcount++;
+    for (let clickcount=0; clickcount<3;clickcount++;){
+    
 
     if(clickcount===1){
       tombol.innerHTML = "aw";
@@ -81,7 +81,7 @@
     emoji.style.display = "block";
     emoji.innerHTML = "😡";
 
-    }
+    }}
   });
 });
 
