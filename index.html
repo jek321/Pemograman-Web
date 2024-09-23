@@ -80,6 +80,14 @@
     emoji.style.display = "block";
     emoji.innerHTML = "😡";
 
+    if (clickcount > 3) {
+      clickcount = 0;
+      tombol.innerHTML = "Pencet aku mas";
+      emoji.style.display = "none";
+      emoji.style.display = "block";
+      emoji.innerHTML = "😊";
+    }
+
 
     }
   });
