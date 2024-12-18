@@ -1,73 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cara Kerja Jaringan</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #555;
-            margin-top: 20px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            padding-left: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Cara Kerja Jaringan</h1>
-        <p>Jaringan adalah kumpulan dari komputer dan perangkat lainnya yang saling terhubung, memungkinkan mereka untuk berkomunikasi dan berbagi informasi. Berikut adalah penjelasan singkat tentang cara kerjanya:</p>
-
-        <h2>1. Apa itu Jaringan?</h2>
-        <p>Jaringan pada dasarnya adalah kumpulan dari beberapa jaringan. Ini memungkinkan komputer dari berbagai belahan dunia untuk terhubung dan berkomunikasi satu sama lain. Ini dicapai dengan menggunakan berbagai perangkat keras seperti router, switch, dan server, serta protokol perangkat lunak seperti TCP/IP.</p>
-
-        <h2>2. Bagaimana Data Bergerak di Jaringan?</h2>
-        <p>Data di jaringan bergerak dalam bentuk paket. Ketika Anda mengirim email atau mengunjungi sebuah situs web, data tersebut dipecah menjadi potongan-potongan kecil yang disebut paket. Paket-paket ini dikirim dari komputer Anda ke tujuan menggunakan serangkaian router dan switch, yang mengarahkan lalu lintas untuk memastikan paket mencapai tujuan yang benar.</p>
-
-        <h2>3. Peran Penyedia Layanan Internet (ISP)</h2>
-        <p>Penyedia Layanan Internet (ISP) adalah perusahaan yang memberikan Anda akses ke internet. Mereka memiliki jaringan besar server dan infrastruktur yang terhubung ke backbone internet global. Ketika Anda terhubung ke internet, data Anda pertama-tama melewati jaringan ISP Anda sebelum diarahkan ke tujuan akhirnya.</p>
-
-        <h2>4. Protokol dan Standar</h2>
-        <p>Jaringan mengandalkan serangkaian protokol standar untuk memastikan data dapat ditransmisikan dengan andal dan akurat. Dua protokol yang paling penting adalah Transmission Control Protocol (TCP) dan Internet Protocol (IP), sering disebut bersama sebagai TCP/IP. Protokol ini mendefinisikan cara data harus dipaketkan, dialamatkan, ditransmisikan, diarahkan, dan diterima.</p>
-
-        <h2>Referensi</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Kerja Internet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Cara Kerja Internet</h1>
+      <nav>
         <ul>
-            <li><a href="https://www.cloudflare.com/learning/network-layer/what-is-the-internet/">Apa itu Internet? - Cloudflare</a></li>
-            <li><a href="https://www.howstuffworks.com/internet/basics/internet.htm">Bagaimana Infrastruktur Internet Bekerja - HowStuffWorks</a></li>
-            <li><a href="https://www.webopedia.com/TERM/I/internet.html">Definisi Internet - Webopedia</a></li>
+          <li><a href="#umum">Cara Kerja Internet</a></li>
+          <li><a href="#http">HTTP & HTTPS</a></li>
+          <li><a href="#domain">Nama Domain</a></li>
+          <li><a href="#hosting">Hosting</a></li>
+          <li><a href="#dns">DNS</a></li>
+          <li><a href="#browser">Browser</a></li>
         </ul>
-    </div>
-</body>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section Umum -->
+      <section id="umum">
+        <h2>Cara Kerja Internet Secara Umum</h2>
+        <p>
+          Internet adalah jaringan global yang menghubungkan jutaan perangkat di seluruh dunia, memungkinkan mereka berkomunikasi dan bertukar data. Bayangkan internet sebagai jalan raya digital yang memungkinkan pertukaran informasi dengan cepat dan efisien. Data yang dikirimkan melalui internet dipecah menjadi paket-paket kecil yang dikirimkan dari satu perangkat ke perangkat lainnya melalui berbagai rute. Paket-paket ini kemudian disusun kembali di tujuan akhir untuk membentuk pesan lengkap.
+        </p>
+        <img src="image/HowInternetWorks.jpg" alt="Diagram Cara Kerja Internet" />
+        <p>Sumber: <a href="https://www.ecomputerz.com/how-the-internet-works.html" target="_blank">how-the-internet-works</a></p>
+      </section>
+
+      <!-- Section HTTP & HTTPS -->
+      <section id="http">
+        <h2>Definisi dan Cara Kerja HTTP & HTTPS</h2>
+        <p>
+          <b>HTTP</b> (Hypertext Transfer Protocol) adalah protokol dasar yang digunakan untuk mentransfer data di web. Ini memungkinkan browser untuk berkomunikasi dengan server dan mengakses halaman web. HTTP berfungsi dengan cara mengirimkan permintaan dari browser pengguna ke server web dan kemudian server mengirimkan kembali data yang diminta dalam bentuk halaman web yang dapat ditampilkan oleh browser. 
+        </p>
+        <p>
+          <b>HTTPS</b> (Hypertext Transfer Protocol Secure) adalah versi aman dari HTTP. HTTPS menggunakan SSL/TLS untuk mengenkripsi data, sehingga informasi sensitif seperti kata sandi dan nomor kartu kredit tetap aman selama transfer. Ketika menggunakan HTTPS, data dienkripsi sebelum dikirimkan, membuatnya lebih sulit bagi pihak ketiga untuk mengakses informasi selama transmisi.
+        </p>
+        <img src="image/Http.jpg" alt="HTTP dan HTTPS" />
+        <p>Sumber: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP" target="_blank">MDN Web Docs</a></p>
+      </section>
+
+      <!-- Section Nama Domain -->
+      <section id="domain">
+        <h2>Definisi dan Cara Kerja Nama Domain</h2>
+        <p>
+          Nama domain adalah alamat unik yang digunakan untuk mengakses situs web. Contoh nama domain adalah <b>www.example.com</b>. Nama domain menggantikan alamat IP yang kompleks dan membuatnya lebih mudah diingat oleh pengguna. Nama domain disusun dalam hierarki yang terdiri dari domain tingkat atas (seperti .com, .org) dan subdomain.
+        </p>
+        <p>
+          Saat Anda memasukkan nama domain di browser, server DNS akan menerjemahkan nama domain tersebut menjadi alamat IP yang sesuai, sehingga browser dapat mengakses situs web yang dimaksud. Proses ini disebut sebagai pencarian DNS, yang melibatkan serangkaian kueri ke berbagai server DNS hingga alamat IP yang benar ditemukan.
+        </p>
+        <p>Sumber: <a href="https://id.wikipedia.org/wiki/Nama_domain" target="_blank">Wikipedia</a></p>
+      </section>
+
+      <!-- Section Hosting -->
+      <section id="hosting">
+        <h2>Definisi dan Cara Kerja Hosting</h2>
+        <p>
+          Hosting adalah layanan yang menyediakan tempat untuk menyimpan semua file dan data yang dibutuhkan oleh situs web agar dapat diakses melalui internet. Penyedia layanan hosting menyediakan server yang selalu terhubung ke internet dan siap menerima permintaan akses dari pengguna. Terdapat berbagai jenis hosting, termasuk shared hosting, VPS (Virtual Private Server), dan dedicated hosting, yang masing-masing menawarkan tingkat kinerja dan keamanan yang berbeda.
+        </p>
+        <p>
+          Saat seseorang mengakses situs web, permintaan dikirim ke server hosting yang menyimpan file situs tersebut. Server kemudian mengirimkan file yang diminta ke browser pengguna, yang kemudian menampilkan halaman web.
+        </p>
+        <p>Sumber: <a href="https://id.wikipedia.org/wiki/Web_hosting" target="_blank">Wikipedia</a></p>
+      </section>
+
+      <!-- Section DNS -->
+      <section id="dns">
+        <h2>Definisi dan Cara Kerja DNS</h2>
+        <p>
+          DNS (Domain Name System) adalah sistem yang menerjemahkan nama domain menjadi alamat IP yang dapat dikenali oleh server. Tanpa DNS, kita harus mengingat dan memasukkan alamat IP setiap kali kita ingin mengakses situs web, yang tentu saja akan sangat merepotkan. DNS bekerja seperti buku telepon internet, menerjemahkan nama domain yang mudah diingat menjadi alamat IP numerik.
+        </p>
+        <p>
+          DNS terdiri dari berbagai komponen, termasuk server DNS root, server DNS tingkat atas, dan server DNS otoritatif. Proses pencarian DNS melibatkan query dari browser pengguna ke server DNS yang tepat untuk menemukan alamat IP yang terkait dengan nama domain.
+        </p>
+        <p>Sumber: <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Infrastructure/DNS" target="_blank">MDN Web Docs</a></p>
+      </section>
+
+      <!-- Section Browser -->
+      <section id="browser">
+        <h2>Definisi dan Cara Kerja Browser</h2>
+        <p>
+          Browser adalah perangkat lunak yang memungkinkan pengguna untuk mengambil, menampilkan, dan berinteraksi dengan konten di web. Contoh browser populer adalah Google Chrome, Mozilla Firefox, dan Safari. Browser berfungsi sebagai perantara antara pengguna dan internet, memungkinkan akses ke berbagai situs web dan aplikasi online.
+        </p>
+        <p>
+          Ketika pengguna memasukkan URL atau melakukan pencarian, browser mengirimkan permintaan ke server yang sesuai, menerima data yang diminta, dan kemudian menampilkan halaman web atau hasil pencarian kepada pengguna. Browser juga menangani berbagai tugas lain, seperti caching untuk mempercepat akses ulang, dan keamanan untuk melindungi pengguna dari konten berbahaya.
+        </p>
+        <p>Sumber: <a href="https://developer.mozilla.org/en-US/docs/Web/Browser" target="_blank">MDN Web Docs</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Terima Kasih, semoga bisa menambah wawasan anda</p>
+    </footer>
+  </body>
 </html>
